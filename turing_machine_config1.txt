@@ -1,0 +1,21 @@
+# States and Symbols Encoding
+q0: 111
+q1: 1111
+q2: 11111
+q3: 1111111
+
+0: 101
+1: 1010
+B: 111111
+L: 1
+R: 11
+FinalState: q3
+
+# Transition Section
+Transitions:
+q0 0 q0 0 R
+q0 1 q1 1 R
+q1 0 q1 0 R
+q1 1 q0 1 R
+q0 B q3 B R
+q3 B q3 B R
